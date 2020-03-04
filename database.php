@@ -12,7 +12,7 @@
 
   $sql = "SELECT * FROM `stanze`";
   $result = $conn->query($sql);
-  var_dump($result);
+  // var_dump($result);
   // die();
 
   if ($result && $result->num_rows > 0) {
