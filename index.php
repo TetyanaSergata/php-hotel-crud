@@ -1,15 +1,16 @@
 <?php
-  include 'database.php';
+  include 'server.php';
+  include 'partials/header.php';
  ?>
 
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
      <link rel="stylesheet" href="dist/app.css">
      <title>Php_Hotel_CRUD</title>
    </head>
-   <body>
+   <body> -->
      <div class="container">
        <div class="row">
          <div class="col-12">
@@ -40,13 +41,17 @@
                           <?php echo $room['room_number']; ?>
                         </td>
                         <td>
-                          <a href="#">VIEW</a>
+                          <a href="show/show.php?id=<?php echo $room['id'] ?>">VIEW</a>
                         </td>
                         <td>
                           <a href="#">UPDATE</a>
                         </td>
+                        <!-- DELETE lo facciamo tramite il FORM -->
                         <td>
-                          <a href="#">DELETE</a>
+                          <form action="delete/delete.php" method="post">
+                            <input type="hidden" name="id" value="<?php echo $room['id'] ?>">
+                            <input class="btn-danger" type="submit" value="DELETE">
+                          </form>
                         </td>
                       </tr>
                 <?php }
