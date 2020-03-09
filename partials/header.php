@@ -1,6 +1,7 @@
-<?php
-  include_once '../env.php';
-?>
+<!-- <?php
+  // include_once '../env.php';
+  include_once 'env.php';
+?> -->
 
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
@@ -15,7 +16,9 @@
         <nav class="navbar navbar-dark bg-dark">
           <div class="navbar-brand">Hotel Booleana</div>
           <ul class="navbar-nav">
-            <li><a href="<?php echo $basePath ?>">Tutte le stanze</a></li>
+            <li>
+              <a href="<?php echo $basePath ?>">Tutte le stanze</a>
+            </li>
           </ul>
         </nav>
       </header>

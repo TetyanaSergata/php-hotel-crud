@@ -1,5 +1,6 @@
 <?php
-  include 'env.php';
+  include_once 'env.php';
+  
 
   // Connect
   $conn = new mysqli($servername, $username, $password, $dbname);
